@@ -24,10 +24,10 @@
   <header class="header">
     <div class="container main-nav">
       <nav class="header-nav">
-        <a href="./index.html" class="header-logo link">Web<span class="header-logo-color">Studio</span></a>
+        <a href="./index.html" class="header-logo link active-page">Web<span class="header-logo-color">Studio</span></a>
         <ul class="header-nav-list list">
           <li class="header-item">
-            <a href="./index.html" class="header-item-link link">Studio</a>
+            <a href="./index.html" class="header-item-link link active-page">Studio</a>
           </li>
           <li class="header-item">
             <a href="./portfolio.html" class="header-item-link link">Portfolio</a>
@@ -58,9 +58,15 @@
           Effective Solutions <br />
           Your Business
         </h1>
-        <button type="button" class="hero-btn">Order Service</button>
+        <button data-modal-open type="button" class="hero-btn">Order Service</button>
       </div>
     </section>
+
+    <div data-modal class="backdrop is-hidden">
+      <div class="modal">
+        <button data-modal-close type="button">Close</button>
+      </div>
+    </div>
 
     <!-- section-1 -->
 
@@ -395,6 +401,7 @@
       </div>
     </div>
   </footer>
+  <script src="./js/modal.js"></script>
 </body>
 
 </html>
