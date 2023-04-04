@@ -101,6 +101,9 @@ body {
   padding-top: 24px;
   padding-bottom: 24px;
 
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -138,7 +141,6 @@ body {
 .header-item-link:hover,
 .header-item-link:focus {
   color: var(--link-text-active-color);
-
 }
 
 
@@ -155,6 +157,13 @@ body {
 
 .active-page.header-item-link::after {
   background-color: #404BBF;
+}
+
+..auth-nav-link {
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 
@@ -203,10 +212,15 @@ body {
   background-color: var(--btn-backroubd-color);
   border-radius: 4px;
   padding: 16px 32px;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-btn:hover {
   background-color: #404BBF;
+
 }
 
 .backdrop {
@@ -236,8 +250,18 @@ body {
   background: #FCFCFC;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-
 }
+
+.backdrop-button {
+  background-color: #ffffff;
+  border: none;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  cursor: pointer;
+}
+
+
 
 /* sections */
 .section {
@@ -371,11 +395,16 @@ body {
   background-color: var(--bc-worker-icon);
   align-items: center;
   justify-content: center;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .worker-soc-link:hover,
 .worker-soc-link:focus {
   background-color: #404BBF;
+
 }
 
 /* CUSTOMERS */
@@ -402,12 +431,17 @@ body {
   border: 1px solid #8E8F99;
   border-radius: 4px;
   fill: #8E8F99;
+
+  transition-property: border-color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-link:hover,
 .customers-link:focus {
   border-color: #404BBF;
   fill: #404BBF;
+
 }
 
 
@@ -458,7 +492,6 @@ body {
 .footer-soc-item {
   width: 40px;
   height: 40px;
-
 }
 
 .footer-soc-link {
@@ -469,11 +502,16 @@ body {
   background-color: var(--bc-worker-icon);
   align-items: center;
   justify-content: center;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-soc-link:hover,
 .footer-soc-link:focus {
   background-color: #31D0AA;
+
 }
 
 
@@ -507,6 +545,10 @@ body {
   border-radius: 4px;
   cursor: pointer;
   border: none;
+
+  transition-property: box-shadow, color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-filters:hover,
@@ -514,7 +556,8 @@ body {
   background-color: var(--btn-filters-active-backround-color);
   color: var(--btn-filters-active-text-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
+
+
 }
 
 img {
@@ -529,11 +572,17 @@ img {
 .portfolio-item {
   margin-right: 24px;
   margin-bottom: 48px;
+
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .portfolio-item:hover,
 .portfolio-item:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+
 }
 
 
@@ -556,4 +605,38 @@ img {
 
 .list {
   background-color: var(--team-list-backround-color);
+}
+
+.portfolio-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-item-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding-top: 40px;
+  padding-right: 32px;
+  padding-left: 32px;
+
+  font-weight: 400;
+  color: #F4F4FD;
+  background-color: #4D5AE5;
+  opacity: 0;
+  pointer-events: none;
+
+  transform: translatey(100%);
+  transition-property: transform, opacity;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.portfolio-img:hover .portfolio-item-overlay {
+  opacity: 1;
+  transform: translatey(0);
+
 }
