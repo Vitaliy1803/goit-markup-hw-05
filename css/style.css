@@ -635,7 +635,8 @@ img {
 
 }
 
-.portfolio-img:hover .portfolio-item-overlay {
+.portfolio-item-link:hover .portfolio-item-overlay,
+.portfolio-item-link:focus .portfolio-item-overlay {
   transform: translatey(0);
 
 }
